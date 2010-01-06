@@ -17,12 +17,13 @@ REM ****************************************************************************
 ECHO This script builds the project in Release configuration
 
 SET CLICKTOBUILD=1
-CALL buildscripts\build.cmd /p:TargetFrameworkVersion=v3.5 /toolsversion:3.5 %*
+CALL buildscripts\build.cmd
 SET CLICKTOBUILD=
 
 IF %ERRORLEVEL% NEQ 0 GOTO err
 ECHO **************************************************************
-ECHO The binaries can be found in the build folder.
+ECHO The binaries can be found in the following folder:
+ECHO %__OUTDIR__%
 ECHO **************************************************************
 
 :err
