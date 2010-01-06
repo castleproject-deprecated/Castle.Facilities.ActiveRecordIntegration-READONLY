@@ -17,7 +17,7 @@ REM ****************************************************************************
 ECHO This script simulates what the build server is doing
 
 ECHO ON
-@REM  /p:AdditionalBuildProperties="/v:d /p:MSBuildTargetsVerbose=true"
+@REM /v:d /p:MSBuildTargetsVerbose=true
 call buildscripts\build.cmd /t:Package /p:Configuration=Release /p:Platform=AnyCPU /p:TargetFrameworkVersion=v3.5 /toolsversion:3.5 %*
 @ECHO OFF
 
