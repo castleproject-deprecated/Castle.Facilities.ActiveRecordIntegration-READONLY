@@ -14,11 +14,6 @@ REM See the License for the specific language governing permissions and
 REM limitations under the License.
 REM ****************************************************************************
 
-ECHO This script simulates what the build server is doing
+if "%~1"=="" build /t:RunAllTests /p:Configuration=Debug
 
-ECHO ON
-@REM /v:d /p:MSBuildTargetsVerbose=true
-call buildscripts\build.cmd /t:Package /p:Configuration=Release /p:Platform=AnyCPU /p:TargetFrameworkVersion=v3.5 /toolsversion:3.5 %*
-@ECHO OFF
-
-@EXIT /B %ERRORLEVEL%
+@call buildscripts\build.cmd %*
