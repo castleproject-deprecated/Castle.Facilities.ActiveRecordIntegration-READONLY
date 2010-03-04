@@ -64,11 +64,6 @@
             Transaction context. Can be used by applications.
             </summary>
         </member>
-        <member name="M:Castle.Services.Transaction.Activity.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Castle.Services.Transaction.Activity"/> class.
-            </summary>
-        </member>
         <member name="T:Castle.Services.Transaction.TransactionMode">
             <summary>
             The supported transaction mode for the components.
@@ -337,6 +332,11 @@
             Gets or sets the logger.
             </summary>
             <value>The logger.</value>
+        </member>
+        <member name="M:Castle.Services.Transaction.Activity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Castle.Services.Transaction.Activity"/> class.
+            </summary>
         </member>
         <member name="T:Castle.Services.Transaction.IResource">
             <summary>
