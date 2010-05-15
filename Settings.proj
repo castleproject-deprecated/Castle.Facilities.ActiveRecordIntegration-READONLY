@@ -49,8 +49,8 @@ limitations under the License.
 			Specify additional items to package here, they are added to the package
 			in addition to automatically detected dependencies.
 			-->
-			<PackageFiles Include="$(RootPath)\lib\NHibernate*.dll" />
-      <PackageFiles Include="$(RootPath)\lib\Iesi*.dll" />
+			<PackageFiles Include="$(RootPath)\lib\NHibernate*" />
+      <PackageFiles Include="$(RootPath)\lib\Iesi*" />
       <PackageFiles Include="$(RootPath)\lib\Antlr3.Runtime.dll" />
 	</ItemGroup>
 
