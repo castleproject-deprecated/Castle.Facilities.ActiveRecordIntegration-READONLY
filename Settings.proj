@@ -41,18 +41,17 @@ limitations under the License.
 		<BuildScriptsPath Condition="'$(BuildScriptsPath)' ==''">$(RootPath)\buildscripts</BuildScriptsPath>
 
 	</PropertyGroup>
-	
 
-	<Target Name="_InitializeDynamicProperties">
-		<PropertyGroup>
+
+  <ItemGroup>
 			<!-- 
 			Specify additional items to package here, they are added to the package
 			in addition to automatically detected dependencies.
 			-->
-			<PackageFiles>$(OutputPath)NHibernate*.dll;$(OutputPath)Iesi*.dll</PackageFiles>
-		</PropertyGroup>
-	</Target>
-
+			<PackageFiles>$(RootPath)\lib\NHibernate*.dll</PackageFiles>
+      <PackageFiles>$(RootPath)\lib\Iesi*.dll</PackageFiles>
+      <PackageFiles>$(RootPath)\lib\Antlr3.Runtime.dll</PackageFiles>
+	</ItemGroup>
 
 	<!-- Import framework version specific settings, like Settings-v3.5 or Settings-v4.0 -->
 	<Import
