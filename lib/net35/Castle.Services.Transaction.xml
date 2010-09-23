@@ -525,7 +525,7 @@
         <member name="M:Castle.Services.Transaction.IO.PathEx.Combine(System.String,System.String)">
             <summary>
             Combines an input path and a path together
-            using <see cref="M:System.IO.Path.Combine(System.String,System.String)"/> and returns the result.
+            using System.IO.Path.Combine and returns the result.
             </summary>
         </member>
         <member name="T:Castle.Services.Transaction.IO.PathInfo">
@@ -1513,31 +1513,6 @@
             An existing appropriate transaction context 
             will be joined if present, but if if there is no current
             transaction on the thread, no transaction will be created.
-            </summary>
-        </member>
-        <member name="M:Castle.Services.Transaction.TransactionScopeResourceAdapter.#ctor(Castle.Services.Transaction.TransactionMode,Castle.Services.Transaction.IsolationMode)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Castle.Services.Transaction.TransactionScopeResourceAdapter"/> class.
-            </summary>
-            <param name="mode">The mode.</param>
-            <param name="isolationMode">The isolation mode.</param>
-        </member>
-        <member name="M:Castle.Services.Transaction.TransactionScopeResourceAdapter.Start">
-            <summary>
-            Implementors should start the
-            transaction on the underlying resource
-            </summary>
-        </member>
-        <member name="M:Castle.Services.Transaction.TransactionScopeResourceAdapter.Commit">
-            <summary>
-            Implementors should commit the
-            transaction on the underlying resource
-            </summary>
-        </member>
-        <member name="M:Castle.Services.Transaction.TransactionScopeResourceAdapter.Rollback">
-            <summary>
-            Implementors should rollback the
-            transaction on the underlying resource
             </summary>
         </member>
         <member name="T:Castle.Services.Transaction.Fun">

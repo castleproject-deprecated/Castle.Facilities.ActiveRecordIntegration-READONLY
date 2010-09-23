@@ -21,7 +21,7 @@ limitations under the License.
 ***********************************************************************************************
 -->
 
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="_InitializeDynamicProperties">
 
 	<!-- Root Path definition relative for actual build file -->
 	<PropertyGroup>
@@ -36,7 +36,7 @@ limitations under the License.
 		<!-- Versioning -->
 		<Project_Major>1</Project_Major>
 		<Project_Minor>1</Project_Minor>
-    <Project_Build>0</Project_Build>
+		<Project_Build>0</Project_Build>
 
 		<!-- Project folders -->
 		<BuildScriptsPath Condition="'$(BuildScriptsPath)' ==''">$(RootPath)\buildscripts</BuildScriptsPath>
@@ -44,15 +44,15 @@ limitations under the License.
 	</PropertyGroup>
 
 
-  <ItemGroup>
+	<Target Name="_InitializeDynamicProperties">
+		<PropertyGroup>
 			<!-- 
 			Specify additional items to package here, they are added to the package
 			in addition to automatically detected dependencies.
 			-->
-			<PackageFiles Include="$(RootPath)\lib\NHibernate*" />
-      <PackageFiles Include="$(RootPath)\lib\Iesi*" />
-      <PackageFiles Include="$(RootPath)\lib\Antlr3.Runtime.dll" />
-	</ItemGroup>
+			<PackageFiles>$(OutputPath)NHibernate*.dll;$(OutputPath)Iesi*.dll;$(OutputPath)Remotion.Data.Linq.dll;$(OutputPath)log4net.dll</PackageFiles>
+		</PropertyGroup>
+	</Target>
 
 	<!-- Import framework version specific settings, like Settings-v3.5 or Settings-v4.0 -->
 	<Import
