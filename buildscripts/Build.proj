@@ -163,7 +163,6 @@ limitations under the License.
 		<ItemGroup>
 			<FilesToPackage Include="$(PackageDir)\**\*.*" Exclude="$(PackageDir)\**\*Tests*" />
 		</ItemGroup>
-		
 		<Zip
 			Files="@(FilesToPackage)"
 			ZipLevel="6"
