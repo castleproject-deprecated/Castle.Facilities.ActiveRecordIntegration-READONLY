@@ -1,7 +1,27 @@
 Change history
 --------------
 
+1.1.1
+======
+
+- Updated to NHIbernate 3.0
+- Updated to Core and Windsor 2.5.2
+- Updated to Transaction Services and Auto TX Facility 2.5.0
+
+- Included .NET 40 binaries on the release package
+
+- Support searchable (NLucene) attribute in the configuration (Facilities-133)
+- Allowing AR Facility to initilize with empty assembly list (Facilities-100)
+- Added PluralizeTableNames to ActiveRecordFacility configuration (Facilities-95)
+
+- Fixed: ActiveRecordFacility doesn't obey namingstrategytype configuration attribute. (Facilities-101)
+
+
+1.1.0
+======
+
 - Allow ability to skip transaction setup so other transaction mechanism can be used.
+- Allow configuration of NamingStrategy (Facilities-122)
 
 Beta 3
 ======
