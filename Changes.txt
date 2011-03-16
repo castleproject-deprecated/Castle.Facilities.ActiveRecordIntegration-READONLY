@@ -1,12 +1,21 @@
 Change history
 --------------
 
+1.1.2
+======
+
+- Updated to NHIbernate 3.1.0 GA
+- Updated to Windsor 2.5.3
+- Updated to Auto TX Facility 2.5.1
+- Updated to ActiveRecord 3.0 RC
+
 1.1.1
 ======
 
 - Updated to NHIbernate 3.0
 - Updated to Core and Windsor 2.5.2
 - Updated to Transaction Services and Auto TX Facility 2.5.0
+- Updated to ActiveRecord 3.0 Beta
 
 - Included .NET 40 binaries on the release package
 
